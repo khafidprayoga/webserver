@@ -32,4 +32,4 @@ jobs:
           context: .
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/echo-webserver:latest
-          file: builder/Dockerfile
+          file: Dockerfile
