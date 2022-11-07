@@ -1,0 +1,15 @@
+# To use www directory
+# Just add public/ on root folder equals with docker compose
+
+version: '3.3'
+services:
+  webserver:
+    image: khafidprayoga/echo-webserver
+    restart: on-failure
+    environment:
+      APP_PORT: "8080"
+      APP_BROWSE: "0"
+    ports:
+      - 80:8080
+    volumes:
+      - ./public:/public
