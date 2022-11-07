@@ -14,6 +14,6 @@ RUN chmod +x /webserver
 
 
 FROM alpine:latest
-COPY --from=build-env /dist/webserver webserver
+COPY --from=build-env /webserver webserver
 COPY ./public /public
 ENTRYPOINT ["./webserver"]
